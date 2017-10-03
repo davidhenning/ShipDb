@@ -14,7 +14,11 @@ fun Application.main() {
     install(CallLogging)
     install(Routing) {
         get("/") {
-            call.respondText("<h1>ShipDB</h1><p>Hello World!!!!</p>", ContentType.Text.Html)
+            call.respondText("<h1>Welcome to ShipDB</h1>", ContentType.Text.Html)
+        }
+
+        get("/api") {
+            call.respondText("{}", ContentType.Application.Json)
         }
     }
 }
